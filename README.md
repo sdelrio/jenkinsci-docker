@@ -18,6 +18,7 @@ jenkins:
   volumes: 
     - /srv/data-jenkins:/var/jenkins_home 
     - /var/run/docker.sock:/var/run/docker.sock
+  privileged: true
   restart: always
 ```
 
