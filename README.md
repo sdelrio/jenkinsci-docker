@@ -2,7 +2,7 @@
 
 Designed to run docker inside a Jenkins docker. It will use the `docker.sock`. It won't run a docker daemon inside a docker.
 
-# Start itup
+# Start it
 
 With a docker file
 
@@ -32,6 +32,7 @@ docker build --rm -t sdelrio/jenkinsci-docker .
 
 # Customize it
 
-- `ENV DOCKER_VERSION 1.11.0`: Version of the docker to include inside the jenkins docker
-- `ENV DOCKER_GID`: GID number for docker group
-
+- `ENV DOCKER_VERSION 1.11.0`: Version of the docker to include inside the jenkins docker.
+- `ENV DOCKER_GID`: GID number for docker group.
+- `plugins.txt`: Plugins to load by default.
+- `custom.groovy`: To configure start workers on master (or disable if set to 0).
