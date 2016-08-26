@@ -1,6 +1,6 @@
 FROM jenkins:alpine
 USER root
-RUN apk add tzdata
+RUN apk update && apk add tzdata && rm -rf /var/cache/apk/*
 COPY plugins.txt /usr/share/jenkins/ref/
 COPY custom.groovy /usr/share/jenkins/ref/init.groovy.d/custom.groovy
 
