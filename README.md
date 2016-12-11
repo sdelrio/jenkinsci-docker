@@ -34,5 +34,5 @@ docker build --rm -t sdelrio/jenkinsci-docker .
 
 - `ENV DOCKER_VERSION 1.11.0`: Version of the docker to include inside the jenkins docker.
 - `ENV DOCKER_GID`: GID number for docker group.
-- `plugins.txt`: Plugins to load by default.
+- `plugins.txt`: Plugins to load with `/usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt`.
 - `custom.groovy`: To configure start workers on master (or disable if set to 0).
