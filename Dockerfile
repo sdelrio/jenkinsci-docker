@@ -1,4 +1,4 @@
-FROM jenkins:2.19.4-alpine
+FROM jenkins:2.32.2-alpine
 USER root
 RUN apk update && apk add tzdata && rm -rf /var/cache/apk/*
 COPY plugins.txt /usr/share/jenkins/ref/
