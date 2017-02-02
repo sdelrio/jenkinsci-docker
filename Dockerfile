@@ -12,5 +12,5 @@ RUN curl -fsSL --create-dirs --output docker.tgz "https://get.docker.com/builds/
     mv docker/* /usr/bin && \
     rmdir docker
 
-RUN apk update && apk add python py-pip && pip install docker-compose && apk del py-pip && rm -rf /var/cache/apk/*
+RUN apk update && apk add python py-pip && pip install --upgrade pip && pip install docker-compose && apk del py-pip && rm -rf /var/cache/apk/*
 
